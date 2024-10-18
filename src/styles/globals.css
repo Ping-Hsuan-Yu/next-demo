@@ -14,7 +14,7 @@
   }
 }
 
-body {
+body, input, select {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-noto-sans), var(--font-noto-sans-tc), sans-serif;

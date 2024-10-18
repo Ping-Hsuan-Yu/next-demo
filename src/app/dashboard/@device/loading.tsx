@@ -1,5 +1,5 @@
 export default function DeviceLoading(){
     return (
-        <div className="bg-amber-200">Device Loading...</div>
+        <div className="bg-amber-200 text-zinc-900">Device Loading...</div>
     )
 }
