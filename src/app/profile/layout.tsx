@@ -12,8 +12,8 @@ export default function TabRedLayout({ children }: { children: React.ReactNode }
       <nav>
         <ul className="flex gap-4 border p-4 rounded">
           {linkArray.map((link) => (
-            <li>
-              <Link href={`/profile/${link !== "profile" ? link : ""}`} key={link} className={`capitalize ${path === link ? "text-blue-600" : ""}`}>
+            <li key={link}>
+              <Link href={`/profile/${link !== "profile" ? link : ""}`} className={`capitalize ${path === link ? "text-blue-600" : ""}`}>
                 {link}
               </Link>
             </li>
