@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #18181b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #18181b;
+    --foreground: #f4f4f5;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-noto-sans), var(--font-noto-sans-tc), sans-serif;
+}
+
+samp,
+code,
+pre,
+kbd {
+  font-family: var(--font-jetbrains-mono), monospace;
+  @apply text-rose-500 bg-zinc-50 dark:text-rose-300 dark:bg-zinc-700 border dark:border-zinc-500 rounded p-1 inline-block;
+}
+
+ul.list {
+  @apply list-disc list-inside;
+}
+
+li > ul {
+  @apply list-disc list-inside pl-4;
+}
