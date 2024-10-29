@@ -4,12 +4,12 @@ import { Formik, Form, useField, Field } from "formik";
 import { object, string } from "yup";
 import { HTMLInputTypeAttribute } from "react";
 
-interface FormValuesType {
-  lastName: string;
-  firstName: string;
-  userId: string;
-  email: string;
-}
+// interface FormValuesType {
+//   lastName: string;
+//   firstName: string;
+//   userId: string;
+//   email: string;
+// }
 
 export default function FormikDemo() {
   const validationSchema = object({
