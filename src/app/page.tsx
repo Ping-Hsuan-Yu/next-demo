@@ -1,7 +1,18 @@
 "use client";
+import NumberFlow from "@number-flow/react";
+import { useState } from "react";
 export default function Home() {
+  const [number, setNumber] = useState(0);
   return (
     <div>
+      <NumberFlow
+        value={number}
+        continuous
+        className="text-9xl"
+        onClick={() => {
+          setNumber(Math.random() * 100000 * Math.random());
+        }}
+      />
       <ul className="list">
         <li>
           Tab
