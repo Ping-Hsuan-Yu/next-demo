@@ -2,7 +2,7 @@
 import NumberFlow from "@number-flow/react";
 import { useState } from "react";
 export default function Home() {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(5173);
   return (
     <div>
       <NumberFlow
@@ -13,6 +13,8 @@ export default function Home() {
           setNumber(Math.random() * 100000 * Math.random());
         }}
       />
+      <p>Click the number see some magic🪄</p>
+      <br />
       <ul className="list">
         <li>
           Tab

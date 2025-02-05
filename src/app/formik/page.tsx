@@ -4,13 +4,6 @@ import { Formik, Form, useField, Field } from "formik";
 import { object, string } from "yup";
 import { HTMLInputTypeAttribute } from "react";
 
-// interface FormValuesType {
-//   lastName: string;
-//   firstName: string;
-//   userId: string;
-//   email: string;
-// }
-
 export default function FormikDemo() {
   const validationSchema = object({
     lastName: string().required("請填寫必填欄位"),
@@ -23,7 +16,13 @@ export default function FormikDemo() {
 
   return (
     <Formik
-      initialValues={{ lastName: "", firstName: "", userId: "", email: "" }}
+      initialValues={{
+        lastName: "",
+        firstName: "",
+        userId: "",
+        email: "",
+        sex: "",
+      }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
         console.log(values);
@@ -48,18 +47,21 @@ export default function FormikDemo() {
             />
             <LabeledInputField label="Email" name="email" type="email" />
             <div className="flex flex-col gap-1 grow">
-              <label htmlFor={`select`} className="tracking-wider">
-                {`Select`}
+              <label htmlFor="sex" className="tracking-wider">
+                性別
               </label>
               <Field
                 as="select"
-                id="select"
-                name="select"
+                id="sex"
+                name="sex"
                 className="px-2 py-2 w-full border border-stone-300 rounded outline-blue-800 caret-blue-800 placeholder:text-stone-400 disabled:bg-stone-200 disabled:text-stone-500"
               >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option disabled value="">
+                  請選擇
+                </option>
+                <option value="f">男</option>
+                <option value="m">女</option>
+                <option value="n">非二元性別</option>
               </Field>
             </div>
           </div>
