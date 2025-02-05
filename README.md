@@ -22,7 +22,7 @@ id 動態routing
 
 表單套件測試
 
-```
+```TSX
 import { object, string } from "yup";
 
 const validationSchema = object({
@@ -35,11 +35,11 @@ const validationSchema = object({
 });
 
 <Formik
-    initialValues={{key: ""}}
+    initialValues={{ key: "",... }}
     validationSchema={validationSchema}
     onSubmit={(values) => {
     console.log(values);
-    // { key: "" }
+    // { key: "",... }
     }}
 >
 ```
